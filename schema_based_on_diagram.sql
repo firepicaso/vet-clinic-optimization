@@ -45,8 +45,11 @@ CREATE TABLE invoice_items (
 );
 
 CREATE INDEX idx_medical_history_patient_id ON medical_histories(patient_id);
+
 CREATE INDEX idx_treatment_history_medical_history_id ON treatment_histories(medical_history_id);
 CREATE INDEX idx_treatment_history_treatment_id ON treatment_histories(treatments_id);
+
 CREATE INDEX idx_invoice_medical_history_id ON invoices(medical_history_id);
+
 CREATE INDEX idx_invoice_item_invoice_id ON invoice_items(invoice_id);
 CREATE INDEX idx_invoice_item_treatment_id ON invoice_items(treatments_id);
